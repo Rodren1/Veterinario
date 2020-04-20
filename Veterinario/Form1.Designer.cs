@@ -86,7 +86,7 @@
             // 
             this.Mascotas.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.Mascotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Mascotas.Location = new System.Drawing.Point(89, 67);
+            this.Mascotas.Location = new System.Drawing.Point(89, 80);
             this.Mascotas.Name = "Mascotas";
             this.Mascotas.Size = new System.Drawing.Size(106, 152);
             this.Mascotas.TabIndex = 0;
