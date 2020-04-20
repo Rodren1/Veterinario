@@ -31,7 +31,9 @@ namespace Veterinario
 
                 if (resultado.Read())
                 {
-                    resultado.GetString(0);
+                    String id = resultado.GetString(0);
+                    conexion.Close();
+                    return (id);
                 }
 
                 conexion.Close();
