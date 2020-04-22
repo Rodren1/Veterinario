@@ -25,12 +25,17 @@ namespace Veterinario
 
         private void inicioSesion_Click(object sender, EventArgs e)
         {
-            String resul = conexion.loginUsuario(UsuarioTBox.Text, ContraseñaTBox.Text);
-            MessageBox.Show(resul);
+            if(conexion.loginUsuario(UsuarioTBox.Text, ContraseñaTBox.Text))
+            {
+                this.Hide();
+                VentanaPrincipal v = new VentanaPrincipal();
+                v.Show();
+            }
+            else
+            {
+                MessageBox.Show("usuario o contraseña incorrecto");
+            }
             
-            //this.Hide();
-            //VentanaPrincipal v = new VentanaPrincipal();
-            //v.Show();
         }
 
     }

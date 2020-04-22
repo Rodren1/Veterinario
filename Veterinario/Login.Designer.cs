@@ -41,19 +41,21 @@
             // UsuarioTBox
             // 
             this.UsuarioTBox.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.UsuarioTBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsuarioTBox.ForeColor = System.Drawing.SystemColors.Window;
             this.UsuarioTBox.Location = new System.Drawing.Point(84, 227);
             this.UsuarioTBox.Name = "UsuarioTBox";
-            this.UsuarioTBox.Size = new System.Drawing.Size(181, 20);
+            this.UsuarioTBox.Size = new System.Drawing.Size(181, 26);
             this.UsuarioTBox.TabIndex = 0;
             // 
             // ContraseñaTBox
             // 
             this.ContraseñaTBox.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.ContraseñaTBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ContraseñaTBox.ForeColor = System.Drawing.SystemColors.Window;
             this.ContraseñaTBox.Location = new System.Drawing.Point(84, 306);
             this.ContraseñaTBox.Name = "ContraseñaTBox";
-            this.ContraseñaTBox.Size = new System.Drawing.Size(181, 20);
+            this.ContraseñaTBox.Size = new System.Drawing.Size(181, 26);
             this.ContraseñaTBox.TabIndex = 1;
             // 
             // usuario
@@ -79,7 +81,7 @@
             this.inicioSesion.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.inicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.inicioSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inicioSesion.Location = new System.Drawing.Point(102, 347);
+            this.inicioSesion.Location = new System.Drawing.Point(101, 348);
             this.inicioSesion.Name = "inicioSesion";
             this.inicioSesion.Size = new System.Drawing.Size(139, 50);
             this.inicioSesion.TabIndex = 4;

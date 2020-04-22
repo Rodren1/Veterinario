@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net, Version=0.1.5073.29922, Culture=neutral, PublicKeyToken=6bcd409ee6bc9292, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt-Official.0.1.109\lib\BCrypt.Net.dll</HintPath>
+    </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
@@ -69,6 +72,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Datos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datos.Designer.cs">
+      <DependentUpon>Datos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FichaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FichaClientes.Designer.cs">
+      <DependentUpon>FichaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FichaMascotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FichaMascotas.Designer.cs">
+      <DependentUpon>FichaMascotas.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +104,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Datos.resx">
+      <DependentUpon>Datos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FichaClientes.resx">
+      <DependentUpon>FichaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FichaMascotas.resx">
+      <DependentUpon>FichaMascotas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal.resx">
       <DependentUpon>VentanaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +141,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
