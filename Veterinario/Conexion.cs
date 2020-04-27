@@ -171,17 +171,20 @@ namespace Veterinario
                 throw e;
             }
         }
-        public int buscadorCliente(String dni)
+        public String buscadorCliente(String dni)
         {
-            int resul;
+            String resul;
             try
             {
                 conexion.Open();
                 MySqlCommand consulta = new MySqlCommand("SELECT identifi FROM clientes WHERE dni = @dni", conexion);
                 consulta.Parameters.AddWithValue("@dni", dni);
                 MySqlDataReader resultado = consulta.ExecuteReader();
-                resultado.Read();
-                return resul = resultado.GetInt32("identifi");
+                if (resultado.Read())
+                {
+                    return resul = resultado.GetString("identifi");
+                }
+                return "No hay datos del cliente seleccionado";
             }
             catch (MySqlException e)
             {

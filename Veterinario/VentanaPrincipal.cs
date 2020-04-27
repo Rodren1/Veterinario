@@ -65,11 +65,11 @@ namespace Veterinario
 
         private void BuscadorCliente_Click(object sender, EventArgs e)
         {
-            int cliente = conexion.buscadorCliente(textBox1.Text);
-            ficha.idActual = cliente;
-            FichaClientes c = new FichaClientes();
-            c.Show();
-
+            String cliente = conexion.buscadorCliente(textBox1.Text);
+            //ficha.idActual = cliente;
+            //FichaClientes c = new FichaClientes();
+            //c.Show();
+            MessageBox.Show(cliente);
         }
     }
 }
