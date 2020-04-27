@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,14 +25,19 @@ namespace Veterinario
             {
                 conexion.Open();
                 MySqlCommand consulta = 
-                    new MySqlCommand("SELECT * FROM usuarios WHERE dni = @dni AND contraseña  = @contraseña", conexion);
+                    new MySqlCommand("SELECT * FROM usuarios WHERE dni = @dni AND contraseña = @contraseña", conexion);
                 consulta.Parameters.AddWithValue("@dni", dni);
                 consulta.Parameters.AddWithValue("@contraseña", contraseña);
                 MySqlDataReader resultado = consulta.ExecuteReader();
 
                 if (resultado.Read())
                 {
-                   
+                    //string passwordConHash = resultado.GetString("contraseña");
+                    //if (BCrypt.Net.BCrypt.Verify(contraseña, passwordConHash))
+                    //{
+                    //    return true;
+                    //}
+                    //return false;
                     return true;
                 }
 
@@ -159,6 +165,23 @@ namespace Veterinario
                 mascotas.Load(resultado);
                 conexion.Close();
                 return mascotas;
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+        }
+        public int buscadorCliente(String dni)
+        {
+            int resul;
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT identifi FROM clientes WHERE dni = @dni", conexion);
+                consulta.Parameters.AddWithValue("@dni", dni);
+                MySqlDataReader resultado = consulta.ExecuteReader();
+                resultado.Read();
+                return resul = resultado.GetInt32("identifi");
             }
             catch (MySqlException e)
             {

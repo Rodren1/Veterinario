@@ -192,23 +192,26 @@
             this.BuscadorCliente.TabIndex = 2;
             this.BuscadorCliente.Text = "Buscar Cliente";
             this.BuscadorCliente.UseVisualStyleBackColor = false;
+            this.BuscadorCliente.Click += new System.EventHandler(this.BuscadorCliente_Click);
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox2.Location = new System.Drawing.Point(6, 247);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(476, 20);
+            this.textBox2.Size = new System.Drawing.Size(476, 31);
             this.textBox2.TabIndex = 1;
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox1.Location = new System.Drawing.Point(6, 43);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(476, 20);
+            this.textBox1.Size = new System.Drawing.Size(476, 31);
             this.textBox1.TabIndex = 0;
             // 
             // tabPage3

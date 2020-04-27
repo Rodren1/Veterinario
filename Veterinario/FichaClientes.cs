@@ -15,7 +15,7 @@ namespace Veterinario
         Conexion miConexion = new Conexion();
         DataTable clientes = new DataTable();
 
-        public static int idActual = 0;
+        public int idActual = 0;
         public FichaClientes()
         {
             InitializeComponent();
@@ -24,15 +24,21 @@ namespace Veterinario
         private void anteriorCliente_Click(object sender, EventArgs e)
         {
             idActual--;
-            if (idActual <= 0) idActual = 1;
-            infoCliente(idActual);
+            if (idActual <= 0)
+            {
+                idActual = 1;
+                infoCliente(idActual);
+            }
         }
 
         private void siguienteCliente_Click(object sender, EventArgs e)
         {
             idActual++;
-            if (idActual >= 2) idActual = 2;
-            infoCliente(idActual);
+            if (idActual >= 100)
+            {
+                idActual = 100;
+                infoCliente(idActual);
+            }
         }
         public void infoCliente(int identifi)
         {

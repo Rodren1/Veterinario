@@ -14,6 +14,7 @@ namespace Veterinario
     public partial class VentanaPrincipal : Form
     {
         Conexion conexion = new Conexion();
+        FichaClientes ficha = new FichaClientes();
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.WindowsShutDown) return;
@@ -56,10 +57,18 @@ namespace Veterinario
 
        private void registroUsuarios_Click(object sender, EventArgs e)
         {
-            String textoContraseña = textBoxContraseña.Text;
-            string miHash = BCrypt.Net.BCrypt.HashPassword(textoContraseña, BCrypt.Net.BCrypt.GenerateSalt());
+            //String textoContraseña = textBoxContraseña.Text;
+            //string miHash = BCrypt.Net.BCrypt.HashPassword(textoContraseña, BCrypt.Net.BCrypt.GenerateSalt());
             MessageBox.Show(conexion.insertaUsuario(textBoxDniUsuario.Text, textBoxNombre_us.Text,
-                miHash, textBoxTelefonoUs.Text));
+                textBoxContraseña.Text, textBoxTelefonoUs.Text));
+        }
+
+        private void BuscadorCliente_Click(object sender, EventArgs e)
+        {
+            int cliente = conexion.buscadorCliente(textBox1.Text);
+            ficha.idActual = cliente;
+            FichaClientes c = new FichaClientes();
+            c.Show();
         }
     }
 }
