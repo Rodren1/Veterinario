@@ -69,6 +69,7 @@ namespace Veterinario
             ficha.idActual = cliente;
             FichaClientes c = new FichaClientes();
             c.Show();
+
         }
     }
 }
