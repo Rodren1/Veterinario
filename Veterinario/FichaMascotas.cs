@@ -24,14 +24,20 @@ namespace Veterinario
         private void anteriorMascota_Click(object sender, EventArgs e)
         {
             idActual--;
-            if (idActual <= 0) idActual = 1;
+            if (idActual <= 0)
+            {
+                idActual = 1;
+            }
             infoMascota(idActual);
         }
 
         private void siguienteMascota_Click(object sender, EventArgs e)
         {
             idActual++;
-            if (idActual >= 2) idActual = 2;
+            if (idActual >= 100)
+            {
+                idActual = 2;
+            }
             infoMascota(idActual);
         }
         public void infoMascota(int codigo_identif)

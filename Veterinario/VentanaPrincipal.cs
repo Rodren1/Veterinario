@@ -15,7 +15,6 @@ namespace Veterinario
     public partial class VentanaPrincipal : Form
     {
         Conexion conexion = new Conexion();
-        FichaClientes ficha = new FichaClientes();
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.WindowsShutDown) return;
@@ -64,14 +63,5 @@ namespace Veterinario
                 textBoxContraseña.Text, textBoxTelefonoUs.Text));
         }
 
-        private void BuscadorCliente_Click(object sender, EventArgs e)
-        {
-            String cliente = conexion.buscadorCliente(textBox1.Text);
-            
-            FichaClientes c = new FichaClientes();
-            ficha.idActual = int.Parse(cliente);
-            c.Show();
-            MessageBox.Show(cliente);
-        }
     }
 }

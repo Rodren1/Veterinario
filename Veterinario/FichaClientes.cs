@@ -20,15 +20,15 @@ namespace Veterinario
         {
             InitializeComponent();
         }
-
+        
         private void anteriorCliente_Click(object sender, EventArgs e)
         {
             idActual--;
             if (idActual <= 0)
             {
                 idActual = 1;
-                infoCliente(idActual);
             }
+            infoCliente(idActual);
         }
 
         private void siguienteCliente_Click(object sender, EventArgs e)
@@ -37,8 +37,8 @@ namespace Veterinario
             if (idActual >= 100)
             {
                 idActual = 100;
-                infoCliente(idActual);
             }
+            infoCliente(idActual);
         }
         public void infoCliente(int identifi)
         {
