@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using BCrypt.Net;
 
 namespace Veterinario
@@ -66,9 +67,10 @@ namespace Veterinario
         private void BuscadorCliente_Click(object sender, EventArgs e)
         {
             String cliente = conexion.buscadorCliente(textBox1.Text);
-            //ficha.idActual = cliente;
-            //FichaClientes c = new FichaClientes();
-            //c.Show();
+            
+            FichaClientes c = new FichaClientes();
+            ficha.idActual = int.Parse(cliente);
+            c.Show();
             MessageBox.Show(cliente);
         }
     }
